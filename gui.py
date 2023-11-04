@@ -12,6 +12,13 @@ pirate_attacks = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackN
 #    """
 #)
 
+def years_only(x):
+    return x.split('-')[0]
+
+def select_by_year(df):
+    year = st.selectbox('Select A Year To View Pirate Attacks for that Year:', df["date"].unique())
+    st.write('You selected:', df.loc[df['date'] == year])
+
 st.title ="Pyrates"
 st.header = "Welcome to the Pyrates App!"
 
@@ -25,3 +32,6 @@ option = st.selectbox(
 st.write('You selected:', option)
 
 country_codes[country_codes['country_name'] == option]
+
+pirate_attacks['date'] = pirate_attacks['date'].apply(years_only)
+select_by_year(pirate_attacks)
