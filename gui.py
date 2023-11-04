@@ -17,11 +17,12 @@ def years_only(x):
 
 # select by year function creates a selectbox that allows the user to select a year to filter attacks by
 def select_by_year(df):
+    df['date'] = df['date'].apply(years_only)
     year = st.selectbox('Select A Year To View Pirate Attacks for that Year:', df["date"].unique())
     st.write('You selected:', df.loc[df['date'] == year])
 
 def select_by_attack(df):
-    attack = st.selectbox('Select An Attack Type to View Attacks of that Type:', df["attack_type"].unique())
+    attack = st.selectbox('Select An Attack Type to View Attacks of that Type:', df["attack_type"].dropna().unique())
     st.write('You selected:', df.loc[df['attack_type'] == attack])
 
 st.title ="Pyrates"
@@ -37,8 +38,6 @@ option = st.selectbox(
     (cnames))
 
 #calling the select by year function 
-pirate_attacks['date'] = pirate_attacks['date'].apply(years_only)
 select_by_year(pirate_attacks)
-
 #calling the select by attack function
 select_by_attack(pirate_attacks)
