@@ -17,8 +17,11 @@ st.header = "Welcome to the Pyrates App!"
 
 st.dataframe(country_codes)
 
+cnames = country_codes[['country_name']]
 option = st.selectbox(
     'Select A Country To View Pirate Attacks for that country:',
-    ('USA', 'Finland', 'Somalia'))
+    (cnames))
 
 st.write('You selected:', option)
+
+country_codes[country_codes['country_name'] == option]
