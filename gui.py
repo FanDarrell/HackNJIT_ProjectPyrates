@@ -29,7 +29,7 @@ def select_by_country(df):
     st.write("You selected:", df.loc[df['nearest_country'] == country_dict[country][0]])
  
 # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
-option = st.selectbox('Select how you would like to sort the data: ', ('Select0', 'Country', 'Year', 'Attack Type'))
+option = st.selectbox('Select how you would like to sort the data: ', ('Select', 'Country', 'Year', 'Attack Type'))
 
 if option is 'Country':
     select_by_country(pirate_attacks)
