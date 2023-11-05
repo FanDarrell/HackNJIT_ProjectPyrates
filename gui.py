@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 
-st.title('Pyrates')
+st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
 
 #Create data frames for each CSV file.
