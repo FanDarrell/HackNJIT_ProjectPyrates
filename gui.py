@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import model.py as md
+#import model.py as md
 import streamlit.components.v1 as components
 
 
@@ -115,10 +115,10 @@ with tab3:
         placeholder = 'Latitude'
     )
 
-    model = md
+    #model = md
     # predpiracy(self, long, lat)
-    st.button('Generate Your Risk Score!', on_click =  md.predpiracy(self, longititude, latitude))
-    #st.button('Generate Your Risk Score!')
+    #st.button('Generate Your Risk Score!', on_click =  md.predpiracy(self, longititude, latitude))
+    st.button('Generate Your Risk Score!')
     #plot_attacks(pirate_attacks)
 
 # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
