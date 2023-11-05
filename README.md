@@ -6,11 +6,11 @@ There are 3 csv files in this data set: Country codes, country indicators and pi
 
 Our project utilizes the streamlit and pandas in order to provide functionality to 3 separate tabs: Categorized Lists, Graphical Data and Attack Prediction Score.
 
-App Created @ HackNJIT 2023 by:
-Amrit Madabushi, Brandon Green, Dan Farrell and Saketh Golla
-
 The Categorized Lists tab asks for you to give a way to sort the data: country, year, attack typem which will open a list right under it in which you can sort data accordingly.
 
 The Graphical Data tab provides you with a bar graph and an interactive map that take data from the pirate_attacks csv. The bar graph sorts based on the category that the user chooses from the list. The interactive map shows red dots on the different parts of the maps
 
 The Attack Prediction takes pirate_attacks.csv data and via machine learning we predicted the likeliness on a scale of 1-5 of the country speciifed by the user to be attacked by pirates.
+
+App Created @ HackNJIT 2023 by:
+Amrit Madabushi, Brandon Green, Dan Farrell and Saketh Golla
