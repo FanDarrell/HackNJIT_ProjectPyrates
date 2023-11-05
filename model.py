@@ -6,7 +6,6 @@ import pandas as pd
 from skimage import io, transform
 import numpy as np
 from sklearn.preprocessing import LabelEncoder as le
-import seaborn as sns
 from sklearn import linear_model
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
