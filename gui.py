@@ -18,6 +18,9 @@ st.header('Welcome to the Pyrates Project!')
 def years_only(x):
     return x.split('-')[0]
 
+def val_counts(x):
+    return x.value_counts()
+
 # select by year function creates a selectbox that allows the user to select a year to filter attacks by
 def select_by_year(df):
     df['date'] = df['date'].apply(years_only)
@@ -31,6 +34,13 @@ def select_by_attack(df):
 def select_by_country(df):
     country = st.selectbox('Select A Country To View Pirate Attacks for that Country:', country_codes['country_name'])
     st.write("You selected:", df.loc[df['nearest_country'] == country_dict[country][0]])
+
+def plot_attacks(df):
+    plot_type = st.selectbox("Select A Category To Plot Number of Attacks by:", pirate_attacks.columns)
+    st.write("You selected:", plot_type)
+    data = pd.DataFrame(df.value_counts(plot_type))
+    st.write(data)
+    st.bar_chart(data)
 
 st.dataframe(country_codes)
 
@@ -48,3 +58,5 @@ select_by_year(pirate_attacks)
 select_by_attack(pirate_attacks)
 #calling the select by country function
 select_by_country(pirate_attacks)
+#calling the plot function
+plot_attacks(pirate_attacks)
