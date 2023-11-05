@@ -75,9 +75,9 @@ def callModel(latitude, longitude):
         result = md.predpiracy(longitude, latitude)
         st.write("Your piracy risk score is: " + str(round(result[0],2)))
         if(result[0] < 3):
-            st.write(":green[You are safe from pirate attacks]")
+            st.write(":green[You are safe from pirate attacks!]")
         elif(result[0] >= 3):
-            st.write(":red[You are at a high risk of pirate attacks]")
+            st.write(":red[You are at a high risk of pirate attacks!]")
     except ValueError:
         st.write("Please enter a valid latitude and longitude")
     pass
