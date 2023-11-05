@@ -8,7 +8,7 @@ st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
 
 st.divider()
-st.text('Dst.text('An app that lets you view historical data on real life pirate attacks, as well as\n lets you see how likely you are to be hijacked by pirates using our state of \nthe art Machine Learning Algorithm! ')')
+st.text('An app that lets you view historical data on real life pirate attacks, as well as\n lets you see how likely you are to be hijacked by pirates using our state of \nthe art Machine Learning Algorithm! ')')
 #Create data frames for each CSV file.
 country_codes = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/country_codes.csv")
 country_indicators = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/country_indicators.csv")
