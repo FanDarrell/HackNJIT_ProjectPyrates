@@ -64,7 +64,7 @@ def map_show(data):
     DATE_COLUMN = 'date'
     DATA_URL = 'https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/pirate_attacks.csv'
     date_to_filter = 1993
-    date_to_filter = st.slider('date', 1993, 2020, 1993)
+    date_to_filter = st.slider('date', min_value=1993, max_value=2020, value=1993, key="slider")
     filtered_data = data[data[DATE_COLUMN].dt.year == date_to_filter]
     st.subheader(f'Interactive map of all pirate attacks in {date_to_filter} [BETA]')
     st.map(filtered_data)
@@ -73,7 +73,7 @@ def callModel(latitude, longitude):
     md = Model()
     try:
         result = md.predpiracy(longitude, latitude)
-        st.write("Your piracy risk score is: " + str(result[0]))
+        st.write("Your piracy risk score is: " + str(round(result[0],2)))
         if(result[0] < 3):
             st.write(":green[You are safe from pirate attacks]")
         elif(result[0] >= 3):
