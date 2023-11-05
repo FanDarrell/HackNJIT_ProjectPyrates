@@ -63,6 +63,7 @@ def load_data(nrows):
 def map_show(data):
     DATE_COLUMN = 'date'
     DATA_URL = 'https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/pirate_attacks.csv'
+    date_to_filter = 1993
     date_to_filter = st.slider('date', 1993, 2020, 1993)
     filtered_data = data[data[DATE_COLUMN].dt.year == date_to_filter]
     st.subheader(f'Interactive map of all pirate attacks in {date_to_filter} [BETA]')
