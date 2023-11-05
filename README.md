@@ -12,5 +12,5 @@ The Graphical Data tab provides you with a bar graph and an interactive map that
 
 The Attack Prediction takes pirate_attacks.csv data and via machine learning we predicted the likeliness on a scale of 1-5 of the country speciifed by the user to be attacked by pirates.
 
-App Created @ HackNJIT 2023 by:
+App Created @HackNJIT 2023 by:
 Amrit Madabushi, Brandon Green, Dan Farrell and Saketh Golla
