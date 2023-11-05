@@ -110,7 +110,6 @@ with tab2:
     # Load 10,000 rows of data into the dataframe.
     data = load_data(9000)
     # Notify the reader that the data was successfully loaded.
-    #data_load_state.text("Done! (using st.cache_data)")
     data_load_state.text('')
     map_show(data)
 
@@ -125,25 +124,7 @@ with tab3:
         'Enter Your Latitude:',
         placeholder = 'Latitude'
     )
-
-    #model = md
-    # predpiracy(self, long, lat)
-   # st.button('Generate Your Risk Score!', on_click =  md.predpiracy(self, longititude, latitude))
     st.button('Generate Your Risk Score!', on_click=callModel(latitude, longitude))
-    #plot_attacks(pirate_attacks)
-
-# Menu code that generates menu options that allows user to aggerate data based category. Code by BG
-#option = st.selectbox('Select how you would like to sort the data: ', ('Select', 'Country', 'Year', 'Attack Type'))
-
-#if option is 'Country':
-#    select_by_country(pirate_attacks)
-
-#if option is 'Year':
- #   select_by_year(pirate_attacks)
-
-#if option is 'Attack Type':
- #   select_by_attack(pirate_attacks)
- #   plot_attacks(pirate_attacks)
 
 st.divider()
 st.text('App Created @ HackNJIT 2023 by team Pyrates.')
