@@ -2,14 +2,9 @@
 
 import os
 import torch
-import torchvision as tv
 import pandas as pd
 from skimage import io, transform
 import numpy as np
-import matplotlib.pyplot as plt
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms, utils
-from torch.autograd import Variable
 from sklearn.preprocessing import LabelEncoder as le
 import seaborn as sns
 from sklearn import linear_model
@@ -35,9 +30,9 @@ class Model:
         targets_df['Attack_type'] = le().fit_transform(targets_df['attack_type'])
 
 
-        longload = torch.from_numpy(longi)
-        lattload = torch.from_numpy(latti) 
-        piracload = torch.from_numpy(targets_df['Attack_type'].to_numpy()) 
+        #longload = torch.from_numpy(longi)
+        #lattload = torch.from_numpy(latti) 
+        #piracload = torch.from_numpy(targets_df['Attack_type'].to_numpy()) 
 
 
         Xdat = targets_df[['longitude', 'latitude', 'shore_distance', 'shore_latitude', 'shore_longitude']].to_numpy()

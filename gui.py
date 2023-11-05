@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import model.py
+from model import Model
 import streamlit.components.v1 as components
 
 
@@ -67,7 +67,7 @@ def map_show(data):
 
 def callModel(latitude, longitude):
     md = Model()
-    #result = md.predpiracy(self, longitude, latitude)
+    result = md.predpiracy(longitude, latitude)
     pass
 
 #EXPERIMENTAL - TABBED CONTAINER - Code by BG
