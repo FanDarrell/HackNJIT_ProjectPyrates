@@ -12,7 +12,7 @@ country_dict = temp.set_index('country_name').T.to_dict('list')
 ##    """<link rel="stylesheet" href="pyrates.css">
 #    """
 #)
-st.title('Pyrates')
+st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
 
 def years_only(x):
