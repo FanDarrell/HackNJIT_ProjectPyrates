@@ -3,9 +3,6 @@ import pandas as pd
 #import model.py as md
 import streamlit.components.v1 as components
 
-
-
-
 st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
 
@@ -39,11 +36,12 @@ def select_by_country(df):
 
 #EXPERIMENTAL GRAPH CHARTS. CODE BY SG
 def plot_attacks(df):
+    df['date'] = df['date'].apply(years_only)
     plot_type = st.selectbox("Select A Category To Plot Number of Attacks by:", ('nearest_country', 'date', 'attack_type', 'vessel_type', 'vessel_status'))
     #st.write("You selected:", plot_type)
-    data = pd.DataFrame(df.value_counts(plot_type))
-   # st.write(data)
-    st.bar_chart(data, x=plot_type, y="Number of Pirate Attacks")
+    data = df.value_counts(plot_type).to_frame()
+    data[plot_type] = data.index
+    st.bar_chart(data, x=plot_type, y="count")
 
 #Map Of Pirate Attack Locations - Code by AM
 @st.cache_data
