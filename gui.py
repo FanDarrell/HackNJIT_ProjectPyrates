@@ -67,7 +67,15 @@ def map_show(data):
 
 def callModel(latitude, longitude):
     md = Model()
-    result = md.predpiracy(longitude, latitude)
+    try:
+        result = md.predpiracy(longitude, latitude)
+        st.write("Your piracy risk score is: " + str(result[0]))
+        if(result[0] < 3):
+            st.write(":green[You are safe from pirate attacks]")
+        elif(result[0] >= 3):
+            st.write(":red[You are at a high risk of pirate attacks]")
+    except ValueError:
+        st.write("Please enter a valid latitude and longitude")
     pass
 
 #EXPERIMENTAL - TABBED CONTAINER - Code by BG
@@ -118,7 +126,7 @@ with tab3:
     #model = md
     # predpiracy(self, long, lat)
    # st.button('Generate Your Risk Score!', on_click =  md.predpiracy(self, longititude, latitude))
-    st.button('Generate Your Risk Score!',)
+    st.button('Generate Your Risk Score!', on_click=callModel(latitude, longitude))
     #plot_attacks(pirate_attacks)
 
 # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
