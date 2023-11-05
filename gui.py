@@ -3,6 +3,7 @@ import pandas as pd
 from model import Model
 import streamlit.components.v1 as components
 
+#Created by: Amrit Madabushi, Brandon Green, Dan Farrell and Saketh Golla
 
 st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
