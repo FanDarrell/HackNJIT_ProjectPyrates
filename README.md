@@ -1,4 +1,4 @@
-# HackNJIT_ProjectPyrates
+# HackNJIT_ProjectPyrates (https://pyrates.streamlit.app/)
 Project for the 2023 Fall NJIT Hackathon
 
 Pyrates is based on a data set provided by https://github.com/newzealandpaul/Maritime-Pirate-Attacks/tree/v1.0/data/csv.
