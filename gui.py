@@ -12,6 +12,8 @@ country_dict = temp.set_index('country_name').T.to_dict('list')
 ##    """<link rel="stylesheet" href="pyrates.css">
 #    """
 #)
+st.title('Pyrates')
+st.header('Welcome to the Pyrates Project!')
 
 def years_only(x):
     return x.split('-')[0]
@@ -29,9 +31,6 @@ def select_by_attack(df):
 def select_by_country(df):
     country = st.selectbox('Select A Country To View Pirate Attacks for that Country:', country_codes['country_name'])
     st.write("You selected:", df.loc[df['nearest_country'] == country_dict[country][0]])
-
-st.title ="Pyrates"
-st.header = "Welcome to the Pyrates App!"
 
 st.dataframe(country_codes)
 
