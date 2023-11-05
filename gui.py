@@ -116,7 +116,7 @@ with tab2:
     map_show(data)
 
 with tab3:
-    st.text('DESCRIPTION')
+    st.text('Choose a coordinate pair to recieve a piracy score which indicates \nhow risk a ship would be at the chosen location.')
     longitude = st.text_input(
         'Enter Your Longitude:',
         placeholder = 'Longitude'
