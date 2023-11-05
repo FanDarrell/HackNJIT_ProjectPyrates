@@ -66,9 +66,9 @@ def map_show(data):
     st.map(filtered_data)
 
 def callModel(latitude, longitude):
-    model = md
-    result = md.predpiracy(self, longitude, latitude)
-    #pass
+    #model = md
+    #result = md.predpiracy(self, longitude, latitude)
+    pass
 
 #EXPERIMENTAL - TABBED CONTAINER - Code by BG
 tab1, tab2, tab3 = st.tabs(["Categorized Lists", "Graphical Data[BETA]", "Attack Prediction Score[BETA]"])    
