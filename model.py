@@ -1,7 +1,7 @@
 # This code trains a model and uses it to predict risk of piracy
 
 import os
-import torch
+#import torch
 import pandas as pd
 from skimage import io, transform
 import numpy as np
