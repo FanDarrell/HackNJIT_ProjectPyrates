@@ -25,12 +25,7 @@ class Model:
 
         longi = targets_df['longitude'].to_numpy()
         latti = targets_df['latitude'].to_numpy()
-        targets_df['Attack_type'] = le().fit_transform(targets_df['attack_type'])
-
-
-        #longload = torch.from_numpy(longi)
-        #lattload = torch.from_numpy(latti) 
-        #piracload = torch.from_numpy(targets_df['Attack_type'].to_numpy()) 
+        targets_df['Attack_type'] = le().fit_transform(targets_df['attack_type']) 
 
 
         Xdat = targets_df[['longitude', 'latitude', 'shore_distance', 'shore_latitude', 'shore_longitude']].to_numpy()
