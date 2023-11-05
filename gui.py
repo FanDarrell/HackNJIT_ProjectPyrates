@@ -39,11 +39,11 @@ def select_by_country(df):
 
 #EXPERIMENTAL GRAPH CHARTS. CODE BY SG
 def plot_attacks(df):
-    plot_type = st.selectbox("Select A Category To Plot Number of Attacks by:", pirate_attacks.columns)
+    plot_type = st.selectbox("Select A Category To Plot Number of Attacks by:", ('nearest_country', 'date', 'attack_type', 'vessel_type', 'vessel_status'))
     #st.write("You selected:", plot_type)
     data = pd.DataFrame(df.value_counts(plot_type))
    # st.write(data)
-    st.bar_chart(data)
+    st.bar_chart(data, title="Number of Pirate Attacks by " + plot_type, x=plot_type, y="Number of Pirate Attacks")
 
 #Map Of Pirate Attack Locations - Code by AM
 @st.cache_data
