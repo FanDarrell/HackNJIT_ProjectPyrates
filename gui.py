@@ -27,16 +27,6 @@ def select_by_attack(df):
 def select_by_country(df):
     country = st.selectbox('Select A Country To View Pirate Attacks for that Country:', country_codes['country_name'])
     st.write("You selected:", df.loc[df['nearest_country'] == country_dict[country][0]])
-
-#st.dataframe(country_codes)
-
-#cnames = country_codes['country_name']
-#st.dataframe(country_indicators)
-#st.dataframe(pirate_attacks)
-#option = st.selectbox(
-#    'Select A Country To view Info:',
-#    (cnames))
-
  
 # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
 option = st.selectbox('Select how you would like to sort the data: ', ('Select0', 'Country', 'Year', 'Attack Type'))
