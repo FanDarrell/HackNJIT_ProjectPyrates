@@ -8,7 +8,7 @@ st.title(':snake: Pyrates :pirate_flag:')
 st.header('Welcome to the Pyrates Project!')
 
 st.divider()
-st.text('DESCRIPTION')
+st.text('Dst.text('An app that lets you view historical data on real life pirate attacks, as well as\n lets you see how likely you are to be hijacked by pirates using our state of \nthe art Machine Learning Algorithm! ')')
 #Create data frames for each CSV file.
 country_codes = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/country_codes.csv")
 country_indicators = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/country_indicators.csv")
@@ -86,7 +86,7 @@ def callModel(latitude, longitude):
 tab1, tab2, tab3 = st.tabs(["Categorized Lists", "Graphical Data[BETA]", "Attack Prediction Score[BETA]"])    
  
 with tab1:
-    st.text('DESCRIPTION')
+    st.text('Select a category from the dropdown menu to see a list of pirates of \nattacks in that category.')
     # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
     option = st.selectbox('Select how you would like to sort the data: ', ('Select', 'Country', 'Year', 'Attack Type'))
     
@@ -100,7 +100,6 @@ with tab1:
         select_by_attack(pirate_attacks)
     
 with tab2:
-    st.text('DESCRIPTION')
     plot_attacks(pirate_attacks) #Load Graph Charts
     
     st.divider()
