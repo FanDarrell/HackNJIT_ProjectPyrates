@@ -22,7 +22,7 @@ class Model:
 
     def __init__(self):
 
-        traind = pd.read_csv("C:\\Users\\Dan\\fallhack2023\\pirate_attacks.csv")
+        traind = pd.read_csv("https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/pirate_attacks.csv")
         targets_df = pd.DataFrame(data=traind)
 
         longi = targets_df['longitude'].to_numpy()
