@@ -41,6 +41,8 @@ def plot_attacks(df):
     #st.write("You selected:", plot_type)
     data = df.value_counts(plot_type).to_frame()
     data[plot_type] = data.index
+    st.header("Count of pirate attacks by " + plot_type)
+    st.divider()
     st.bar_chart(data, x=plot_type, y="count")
 
 #Map Of Pirate Attack Locations - Code by AM
