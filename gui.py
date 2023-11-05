@@ -4,8 +4,8 @@ from model import Model
 import streamlit.components.v1 as components
 
 
-#st.title(':snake: Pyrates :pirate_flag:')
-#st.header('Welcome to the Pyrates Project!')
+st.title(':snake: Pyrates :pirate_flag:')
+st.header('Welcome to the Pyrates Project!')
 
 st.divider()
 st.text('DESCRIPTION')
