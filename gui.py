@@ -70,6 +70,7 @@ def map_show(data):
     st.subheader(f'Interactive map of all pirate attacks in {date_to_filter} [BETA]')
     st.map(filtered_data)
 
+#Function that calls the Machine Learning Model in the UI based on the latitude and longitude the user enters. Code by DF and SG
 def callModel(latitude, longitude):
     md = Model()
     try:
@@ -87,7 +88,7 @@ def callModel(latitude, longitude):
 tab1, tab2, tab3 = st.tabs(["Categorized Lists", "Graphical Data[BETA]", "Attack Prediction Score[BETA]"])    
  
 with tab1:
-    st.text('Select a category from the dropdown menu to see a list of pirates of \nattacks in that category.')
+    st.text('Select a category from the dropdown menu to see a list of pirates \nattacks in that category.')
     # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
     option = st.selectbox('Select how you would like to sort the data: ', ('Select', 'Country', 'Year', 'Attack Type'))
     
@@ -110,8 +111,7 @@ with tab2:
     data_load_state = st.text('Loading data...')
     # Load 10,000 rows of data into the dataframe.
     data = load_data(9000)
-    # Notify the reader that the data was successfully loaded.
-    data_load_state.text('')
+    data_load_state.text('') #BUGFIX to keep 'Loading data...' message from remaining on screen after data is loaded.
     map_show(data)
 
 with tab3:
