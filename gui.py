@@ -88,7 +88,7 @@ def callModel(latitude, longitude):
 tab1, tab2, tab3 = st.tabs(["Categorized Lists", "Graphical Data[BETA]", "Attack Prediction Score[BETA]"])    
  
 with tab1:
-    st.text('Select a category from the dropdown menu to see a list of pirates \nattacks in that category.')
+    st.text('Select a category from the dropdown menu to see a list of pirate \nattacks in that category.')
     # Menu code that generates menu options that allows user to aggerate data based category. Code by BG
     option = st.selectbox('Select how you would like to sort the data: ', ('Select', 'Country', 'Year', 'Attack Type'))
     
