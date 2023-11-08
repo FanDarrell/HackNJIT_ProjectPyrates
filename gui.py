@@ -76,9 +76,9 @@ def callModel(latitude, longitude):
     try:
         result = md.predpiracy(longitude, latitude)
         st.write("Your piracy risk score is: " + str(round(result[0],2)))
-        if(result[0] < 3):
+        if(result[0] < 3.5):
             st.write(":green[You are safe from pirate attacks!]")
-        elif(result[0] >= 3):
+        elif(result[0] >= 3.5):
             st.write(":red[You are at a high risk of pirate attacks!]")
     except ValueError:
         st.write("Please enter a valid latitude and longitude")
@@ -110,12 +110,13 @@ with tab2:
     # Create a text element and let the reader know the data is loading.
     #data_load_state = st.text('Loading data...')
     # Load 10,000 rows of data into the dataframe.
-    data = load_data(10000)
+    data = load_data(9000)
    # data_load_state.text('') #BUGFIX to keep 'Loading data...' message from remaining on screen after data is loaded.
     map_show(data)
 
 with tab3:
     st.text('Choose a coordinate pair to recieve a piracy score which indicates \nhow at risk a ship would be at the chosen location.')
+    st.text(' * Note: Putting in land coordinates may lead to unpredicatable results! *')
     longitude = st.text_input(
         'Enter Your Longitude:',
         placeholder = 'Longitude'
