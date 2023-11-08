@@ -50,7 +50,7 @@ def plot_attacks(df):
     st.bar_chart(data, x=plot_type, y="count")
 
 #Map Of Pirate Attack Locations - Code by AM
-@st.cache_data
+#@st.cache_data
 def load_data(nrows):
     DATE_COLUMN = 'date'
     DATA_URL = 'https://raw.githubusercontent.com/FanDarrell/HackNJIT_ProjectPyrates/main/pirate_attacks.csv'
