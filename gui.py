@@ -119,12 +119,14 @@ with tab3:
     st.text(' * Note: Putting in land coordinates may lead to unpredicatable results! *')
     longitude = st.text_input(
         'Enter Your Longitude:',
-        placeholder = 'Longitude'
+        placeholder = 'Longitude',
+        on_change = None
     )
 
     latitude = st.text_input(
         'Enter Your Latitude:',
-        placeholder = 'Latitude'
+        placeholder = 'Latitude',
+        on_change = None
     )
     st.button('Generate Your Risk Score!', on_click=callModel(latitude, longitude))
 
