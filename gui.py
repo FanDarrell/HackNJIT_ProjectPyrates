@@ -110,7 +110,7 @@ with tab2:
     # Create a text element and let the reader know the data is loading.
     #data_load_state = st.text('Loading data...')
     # Load 10,000 rows of data into the dataframe.
-    data = load_data(9000)
+    data = load_data(10000)
    # data_load_state.text('') #BUGFIX to keep 'Loading data...' message from remaining on screen after data is loaded.
     map_show(data)
 
@@ -120,13 +120,13 @@ with tab3:
     longitude = st.text_input(
         'Enter Your Longitude:',
         placeholder = 'Longitude',
-        on_change = None
+        on_change=None
     )
 
     latitude = st.text_input(
         'Enter Your Latitude:',
         placeholder = 'Latitude',
-        on_change = None
+        on_change=None
     )
     st.button('Generate Your Risk Score!', on_click=callModel(latitude, longitude))
 
